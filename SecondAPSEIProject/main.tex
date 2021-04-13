@@ -1,0 +1,121 @@
+\documentclass{article}
+% Margin definition.
+\usepackage[a4paper,total={6.8in, 8.5in}]{geometry}
+\usepackage{parskip}
+% Images.
+\usepackage{graphicx}
+\usepackage[hidelinks, bookmarks=true]{hyperref}
+\usepackage{float}
+% Encoding.
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+% Allow multiline comments
+\usepackage{verbatim} 
+% Helvetic font.
+\usepackage[scaled]{helvet}
+\renewcommand\familydefault{\sfdefault} 
+% Header for UA logo.
+\usepackage{fancyhdr}
+% Dots in index.
+\usepackage[titles]{tocloft}
+\renewcommand{\cftsubsecleader}{\Large\cftdotfill{0}}
+\renewcommand{\cftsecleader}{\Large\cftdotfill{0}}
+\renewcommand{\cftsecfont}{\large\bfseries\scshape}
+\renewcommand{\cftsubsecfont}{\scshape}
+\renewcommand*{\HyperDestNameFilter}[1]{\jobname-#1}
+% Dot after number in (sub)sections and in toc.
+\renewcommand{\cftsecaftersnum}{.}
+\renewcommand{\cftsubsecaftersnum}{.}
+\usepackage{titlesec}
+\titlelabel{\hspace{-0.5cm}\quad}
+\usepackage[letterspace=45]{microtype}
+\newcommand*{\fullref}[1]{\hyperref[{#1}]{\autoref*{#1} \nameref*{#1}}}
+% Header with UA logo definition. 
+\pagestyle{fancy}
+\fancyhf{}
+\chead{
+    \includegraphics[width=5in]{./images/header_ua.png}
+}
+\setlength\headheight{20pt}
+% Footer with page number.
+\rfoot{Page \thepage}
+\renewcommand{\footrulewidth}{0.1pt}
+% Rename table of contents title to "Index"
+\renewcommand{\contentsname}{\normalsize Index \vspace{0.6cm}}
+% Add text with hyperlink
+\usepackage{hyperref}
+%\hypersetup{
+%    colorlinks=true,
+%    linkcolor=blue,
+%    filecolor=magenta
+%}
+% Water mark
+\newsavebox\mybox
+\usepackage[printwatermark]{xwatermark}
+\usepackage{xcolor}
+\usepackage{tikz}
+% paragraph
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\setlength\parindent{24pt}
+%images
+ \usepackage{graphicx}
+\usepackage{caption}
+% footnotes at bottom
+\usepackage[bottom]{footmisc}
+% Urls with line break
+\usepackage{pdflscape}
+% Drawing functions
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm, height=4cm, compat=1.17}
+
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
+
+%%%%%%%%%%%% References/Bibliography %%%%%%%%%%%%
+\usepackage{biblatex}
+\addbibresource{bibliography.bib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%% Cover Page %%%%%%%%%%%%%%%%%%
+\title{\vspace{-0.9cm}
+       \vspace{1cm}
+       \normalsize
+       \raggedright\textbf{Title: \hspace{1.5cm} [To be named]} \\ \vspace{0.4cm}
+       \raggedright\textbf{Autor: \hspace{1.3cm} Eduardo Santos, Hugo Ferreira, João Soares, Pedro Bastos} \\ \vspace{0.4cm}
+       \raggedright\textbf{Date: \hspace{1.45cm} 13/04/2021} \\}
+\author{}
+\date{}
+
+\maketitle
+\thispagestyle{fancy}
+
+%%%%%%%%%%%%%%%%%% END Cover Page %%%%%%%%%%%%%%%%%%
+
+\vspace{-1.4cm}
+
+\tableofcontents
+
+
+\fontsize{10pt}{13pt}
+\selectfont
+\lsstyle
+
+\titlelabel{\thetitle.\quad}	
+
+\newpage
+
+\section{Introductory Note}
+
+
+
+% Add "References" to table of contents
+\addcontentsline{toc}{section}{References}
+% No cite makes all references appear, even if there's no citation on the text
+\nocite{*}
+\printbibliography
+
+\end{document}
