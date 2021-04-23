@@ -16,6 +16,9 @@
 \renewcommand\familydefault{\sfdefault} 
 % Header for UA logo.
 \usepackage{fancyhdr}
+% package for plots / graphics
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,compat=newest}
 % Dots in index.
 \usepackage[titles]{tocloft}
 \renewcommand{\cftsubsecleader}{\Large\cftdotfill{0}}
@@ -137,11 +140,53 @@ To use this digital asset, there are many steps/rules that need to be followed, 
 
 \subsubsection{How does it work?}
 
-\tab Bitcoins are not stored centrally nor locally, they exist in a distributed ledger called blockchain. This ledger runs on a P2P\footnote{peer-to-peer} network of computers.
+\tab Bitcoins are not stored centrally nor locally, they exist in a distributed ledger called blockchain. This ledger runs on a P2P\footnote{peer-to-peer} network of computers. 
 
+Owning a Bitcoin is, nothing more, nothing less than simply having the power to transfer it to someone else, with the transaction being recorded in the blockchain. But how does this work?
 
+This is made possible with the usage of an private key - public key ECDSA\footnote{Elliptic Curve Digital Signature Algorithm} pair.
 
-\subsection{}
+\subsubsection{ECDSA}
+
+\tab ECDSA is a variant of the DSA\footnote{Digital Signature Algorithm}, this uses elliptic curve cryptography. An elliptic curve is mathematically represented by the following equation:
+
+\[y^2 = ax^3 + bx^2 + cx + d\]
+
+In the case of Bitcoin:
+
+\[a = 1\]
+\[b = 0\]
+\[c = 0\]
+\[d = 7\: mod\: 1.158 \times 10^{77}\]
+
+Replacing the values, we obtain:
+
+\[y^2 = x^3 + 7 \bmod{1.158 \times 10^{77}}\]
+
+Finally, this equation can be translated to the following graphic:
+
+\centering
+\begin{tikzpicture}
+    \begin{axis}[
+        width=0.5\textwidth,
+        height=0.3\textwidth,
+        xmin=-5,
+        xmax=5,
+        ymin=-5,
+        ymax=5,
+        xlabel={$x$},
+        ylabel={$f(x)$},
+        scale only axis,
+        axis lines=middle,
+        smooth,
+        domain=-1.912931:3,
+        xtick={-5,...,0,...,5},
+        ytick={-5,...,0,...,5},
+    ]
+        \addplot [red] {sqrt(x^3 + mod(7, 1.158*10^(77)))};
+        \addplot [red] {-sqrt(x^3 + mod(7, 1.158*10^(77)))};
+    \end{axis}
+\end{tikzpicture}
 
 % Add "References" to table of contents
 \addcontentsline{toc}{section}{References}
