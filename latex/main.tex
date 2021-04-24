@@ -171,6 +171,18 @@ Finally, this equation can be translated to the following graphic:
 %This is only possible by adding also \usepackage{float} to the preamble
 \begin{figure}[H]
     \begin{center}
+        \includegraphics[width=0.6 \textwidth]{images/Kobiltz_curve.png}
+        \caption{\textit{Kobiltz curve}}
+    \end{center}
+\end{figure}
+
+\vspace{5mm} %5mm vertical space
+
+\begin{comment}
+%Added [H] after so that image is placed after the text above
+%This is only possible by adding also \usepackage{float} to the preamble
+\begin{figure}[H]
+    \begin{center}
         \begin{tikzpicture}
             \begin{axis}[
                 width=0.5\textwidth,
@@ -195,8 +207,7 @@ Finally, this equation can be translated to the following graphic:
     \end{center}
     \caption{Kobiltz curve}
 \end{figure}
-
-\vspace{5mm} %5mm vertical space
+\end{comment}
 
 The curve on the graph above is called \textit{Kobiltz curve}, and its often referred as \textit{secp256k1}. This curve was created on purpose, and with a very defined objective: to increase efficiency in the generation of public and private keys, making the computation of this key pair 30\% faster. But this is not the only thing that differentiates this curve from the rest of the elliptical curves, due to the precision in choosing the values of the constants \(a, b, c\) and \(d\), the probability of having an attack in the process in a way that can compromise it is as small as possible.
 
