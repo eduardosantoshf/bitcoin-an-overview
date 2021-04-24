@@ -165,28 +165,46 @@ Replacing the values, we obtain:
 
 Finally, this equation can be translated to the following graphic:
 
-\centering
-\begin{tikzpicture}
-    \begin{axis}[
-        width=0.5\textwidth,
-        height=0.3\textwidth,
-        xmin=-5,
-        xmax=5,
-        ymin=-5,
-        ymax=5,
-        xlabel={$x$},
-        ylabel={$f(x)$},
-        scale only axis,
-        axis lines=middle,
-        smooth,
-        domain=-1.912931:3,
-        xtick={-5,...,0,...,5},
-        ytick={-5,...,0,...,5},
-    ]
-        \addplot [red] {sqrt(x^3 + mod(7, 1.158*10^(77)))};
-        \addplot [red] {-sqrt(x^3 + mod(7, 1.158*10^(77)))};
-    \end{axis}
-\end{tikzpicture}
+\vspace{5mm} %5mm vertical space
+
+%Added [H] after so that image is placed after the text above
+%This is only possible by adding also \usepackage{float} to the preamble
+\begin{figure}[H]
+    \begin{center}
+        \begin{tikzpicture}
+            \begin{axis}[
+                width=0.5\textwidth,
+                height=0.3\textwidth,
+                xmin=-5,
+                xmax=5,
+                ymin=-5,
+                ymax=5,
+                xlabel={$x$},
+                ylabel={$f(x)$},
+                scale only axis,
+                axis lines=middle,
+                smooth,
+                domain=-1.912931:3, %supostamente, sem esta linha o gráfico divide-se em 2 partes, tristeza
+                xtick={-5,...,0,...,5},
+                ytick={-5,...,0,...,5},
+            ]
+                \addplot [red] {sqrt(x^3 + mod(7, 1.158*10^(77)))};
+                \addplot [red] {-sqrt(x^3 + mod(7, 1.158*10^(77)))};
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+    \caption{Kobiltz curve}
+\end{figure}
+
+\vspace{5mm} %5mm vertical space
+
+The curve on the graph above is called \textit{Kobiltz curve}, and its often referred as \textit{secp256k1}. This curve was created on purpose, and with a very defined objective: to increase efficiency in the generation of public and private keys, making the computation of this key pair 30\% faster. But this is not the only thing that differentiates this curve from the rest of the elliptical curves, due to the precision in choosing the values of the constants \(a, b, c\) and \(d\), the probability of having an attack in the process in a way that can compromise it is as small as possible.
+
+We already mentioned the private key - public key pair, but what is it and what is it for? Let's take a look at it in the section below.
+
+\subsubsection{Private-Public key pair}
+
+\tab In this case, this pair is used in bitcoin and other cryptocurrencies transactions.
 
 % Add "References" to table of contents
 \addcontentsline{toc}{section}{References}
