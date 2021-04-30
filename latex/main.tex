@@ -11,6 +11,15 @@
 \usepackage[utf8]{inputenc}
 % Allow multiline comments
 \usepackage{verbatim} 
+% To have another layer of sub sections - \paragraph
+\usepackage{titlesec}
+
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 % Helvetic font.
 \usepackage[scaled]{helvet}
 \renewcommand\familydefault{\sfdefault} 
@@ -134,13 +143,9 @@ We will also address the topic of Blockchain, and how does it work.
 
 \subsection{The Bitcoin Protocol}
 
-\tab Being a decentralized digital currency, Bitcoin is not something that we can physically own, which in itself generates a large deviation from the concept of money that we are used to and that we use in our day-to-day.
+\tab Being a decentralized digital currency, Bitcoin is not something that we can physically own, which in itself generates a large deviation from the concept of money that we are used to and that we use in our day-to-day. To use this digital asset, there are many steps/rules that need to be followed, they make up the Bitcoin protocol.
 
-To use this digital asset, there are many steps/rules that need to be followed, they make up the Bitcoin protocol.
-
-\subsubsection{How does it work?}
-
-\tab Bitcoins are not stored centrally nor locally, they exist in a distributed ledger called blockchain. This ledger runs on a P2P\footnote{peer-to-peer} network of computers. 
+Bitcoins are not stored centrally nor locally, they exist in a distributed ledger called blockchain. This ledger runs on a P2P\footnote{peer-to-peer} network of computers. 
 
 Owning a Bitcoin is, nothing more, nothing less than simply having the power to transfer it to someone else, with the transaction being recorded in the blockchain. But how does this work?
 
@@ -150,14 +155,15 @@ This is made possible with the usage of an private key - public key ECDSA\footno
 
 \tab ECDSA is a variant of the DSA\footnote{Digital Signature Algorithm}, this uses elliptic curve cryptography. An elliptic curve is mathematically represented by the following equation:
 
-\[y^2 = ax^3 + bx^2 + cx + d\]
+\[y^2 = ax^3 + bx + c\]
 
 In the case of Bitcoin:
 
 \[a = 1\]
 \[b = 0\]
-\[c = 0\]
-\[d = 7\: mod\: 1.158 \times 10^{77}\]
+\[c = d\: mod\: p\]
+\[d = 7\]
+\[p = 1.158 \times 10^{77}\]
 
 Replacing the values, we obtain:
 
@@ -211,7 +217,80 @@ Finally, this equation can be translated to the following graphic:
 
 The curve on the graph above is called \textit{Kobiltz curve}, and its often referred as \textit{secp256k1}. This curve was created on purpose, and with a very defined objective: to increase efficiency in the generation of public and private keys, making the computation of this key pair 30\% faster. But this is not the only thing that differentiates this curve from the rest of the elliptical curves, due to the precision in choosing the values of the constants \(a, b, c\) and \(d\), the probability of having an attack in the process in a way that can compromise it is as small as possible.
 
-We already mentioned the private key - public key pair, but what is it and what is it for? Let's take a look at it in the section below.
+Elliptic curves have some properties, in  this case, for example:
+
+\begin{itemize}
+    \item A non-vertical line that intersects two non-tangent points on the curve will always intersect a third point on the same curve.
+    \item A non-vertical line tangent to the curve at one point will intersect only one other point on the curve.
+\end{itemize}
+
+This properties allow us to define two operations: point addition and point doubling.
+
+\paragraph{Point addition}
+
+Point addition consists of following this steps:
+
+\begin{itemize}
+    \item Take two points of the elliptic curve, \(P\) and \(Q\).
+    \item Pass a line through the previous points.
+    \item Mark the point (\(-R\)) from the intersection of the previous line with the curve.
+    \item Mirror \(-R\) through the x-axis, obtaining \(R\)
+\end{itemize}
+
+This algorithm can be put into the following expression:
+
+\[P + Q = R\]
+
+With \(R\) being the result of the sum of the original points.
+
+Finally, this equation can be translated to the following graphic:
+
+\vspace{5mm} %5mm vertical space
+
+%Added [H] after so that image is placed after the text above
+%This is only possible by adding also \usepackage{float} to the preamble
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.6 \textwidth]{images/point_addition.png}
+        \caption{\textit{Point addition}}
+    \end{center}
+\end{figure}
+
+\vspace{5mm} %5mm vertical space
+
+\paragraph{Point doubling}
+
+Point doubling consists of following this steps:
+
+\begin{itemize}
+    \item Take a point of the elliptic curve, \(P\).
+    \item Pass a tangent line tangent to \(P\).
+    \item Mark the point (\(-R\)) from the intersection of the previous line with the curve.
+    \item Mirror \(-R\) through the x-axis, obtaining \(R\)
+\end{itemize}
+
+This algorithm can be put into the following expression:
+
+\[P + P = 2P = R\]
+
+With \(R\) being the result of the sum of \(R\) with itself.
+
+Finally, this equation can be translated to the following graphic:
+
+\vspace{5mm} %5mm vertical space
+
+%Added [H] after so that image is placed after the text above
+%This is only possible by adding also \usepackage{float} to the preamble
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.6 \textwidth]{images/point_doubling.png}
+        \caption{\textit{Point doubling}}
+    \end{center}
+\end{figure}
+
+\vspace{5mm} %5mm vertical space
+
+%We already mentioned the private key - public key pair, but what is it and what is it for? Let's %take a look at it in the section below.
 
 \subsubsection{Private-Public key pair}
 
