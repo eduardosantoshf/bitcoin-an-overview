@@ -129,17 +129,19 @@ We will also address the topic of Blockchain, and how does it work.
 
 \tab Bitcoin is a cryptocurrency that has been widely spoken over the past few years, majorly because of what it represents: the beginning if the globalization of digital currencies.
 
+\section{Cryptocurrencies}
+
 \section{Blockchain}
 
 \subsection{What is the Blockchain?}
 
 \subsection{How does it work?}
 
-
-
 \section{Bitcoin}
 
 \subsection{What is Bitcoin?}
+
+\subsection{The Seven Pillars of Bitcoin}
 
 \subsection{The Bitcoin Protocol}
 
@@ -228,7 +230,7 @@ This properties allow us to define two operations: point addition and point doub
 
 \paragraph{Point addition}
 
-Point addition consists of following this steps:
+\tab Point addition consists of following this steps:
 
 \begin{itemize}
     \item Take two points of the elliptic curve, \(P\) and \(Q\).
@@ -260,7 +262,7 @@ Finally, this equation can be translated to the following graphic:
 
 \paragraph{Point doubling}
 
-Point doubling consists of following this steps:
+\tab Point doubling consists of following this steps:
 
 \begin{itemize}
     \item Take a point of the elliptic curve, \(P\).
@@ -290,11 +292,32 @@ Finally, this equation can be translated to the following graphic:
 
 \vspace{5mm} %5mm vertical space
 
+\paragraph{Point doubling}
+
+\tab Point addition and point doubling combined are used for scalar multiplication, this means adding a point to itself \(n\) times:
+
+\[R = nP\]
+
+To explain it better, we will use the following example:
+
+\[R = 11P\]
+\[R = P + (P + (P + (P + (P + (P + (P + (P + (P + (P + P)))))))))\]
+
+This can be simplified using the previous operations:
+
+\[R = 11P\]
+\[R = P + 10P\]
+\[R = P + 2(5P)\]
+\[R = P + 2(P + 4P)\]
+\[R = P + 2(P + 2(2P))\]
+
+As we can see, we just decomposed \(11P\) into two point additions and three point doubling. This can be very useful when \(n\) is a large number, and scalar multiplication itself will be needed for calculating the private-public key pair.
+
 %We already mentioned the private key - public key pair, but what is it and what is it for? Let's %take a look at it in the section below.
 
-\subsubsection{Private-Public key pair}
+%\subsubsection{Private-Public key pair}
 
-\tab In this case, this pair is used in bitcoin and other cryptocurrencies transactions.
+%\tab In this case, this pair is used in bitcoin and other cryptocurrencies transactions.
 
 % Add "References" to table of contents
 \addcontentsline{toc}{section}{References}
