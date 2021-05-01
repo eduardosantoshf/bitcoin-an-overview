@@ -281,8 +281,6 @@ Finally, this equation can be translated to the following graphic:
 
 \vspace{5mm} %5mm vertical space
 
-%Added [H] after so that image is placed after the text above
-%This is only possible by adding also \usepackage{float} to the preamble
 \begin{figure}[H]
     \begin{center}
         \includegraphics[width=0.6 \textwidth]{images/point_doubling.png}
@@ -311,11 +309,31 @@ This can be simplified using the previous operations:
 \[R = P + 2(P + 4P)\]
 \[R = P + 2(P + 2(2P))\]
 
-As we can see, we just decomposed \(11P\) into two point additions and three point doubling. This can be very useful when \(n\) is a large number, and scalar multiplication itself will be needed for calculating the private-public key pair.
+As we can see, we just decomposed \(11P\) into two point additions and three point doubling. This can be very useful when \(n\) is a large number.
 
-%We already mentioned the private key - public key pair, but what is it and what is it for? Let's %take a look at it in the section below.
+One of the uses of scalar multiplication is to calculate the private-public key pair, we will take a look on how it works and where it is placed in the Bitcoin protocol in the section bellow.
 
-%\subsubsection{Private-Public key pair}
+\subsubsection{Private-Public key pair}
+
+\tab The private-public key pair is used on Bitcoin transactions between users.
+
+
+
+\begin{comment}
+Graphically is even easier to understand this, for instance, if we take a point \(P\), and we want to obtain \(4P\), the process would result in this graph:
+
+\vspace{5mm} %5mm vertical space
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.6 \textwidth]{images/Kobiltz_curve_with_points.png}
+        \caption{\textit{Process of obtaining \(4P\) from the point \(P\), using scalar multiplication}}
+    \end{center}
+\end{figure}
+
+\vspace{5mm} %5mm vertical space
+
+\end{comment}
 
 %\tab In this case, this pair is used in bitcoin and other cryptocurrencies transactions.
 
