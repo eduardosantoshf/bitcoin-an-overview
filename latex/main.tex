@@ -134,7 +134,56 @@ We will also address the topic of Blockchain, and how does it work.
 
 \section{Blockchain}
 
-\subsection{What is the Blockchain?}
+\subsection{What is the blockchain?}
+
+\tab A blockchain is a chain of blocks that contains information. A blockchain is a distributed ledger that is completely open to anyone, and it relies on a key property: when some data is recorded inside a blockchain, it becomes very difficult to change it. But how does that work?
+
+Each block in the blockchain contains:
+
+\begin{itemize}
+    \item \textbf{Data} - this stored data depends on the type of blockchain. In the case of the Bitcoin blockchain, it stores the following details:
+    \begin{itemize}
+        \item Sender
+        \item Receiver
+        \item Amount of coins to be traded
+    \end{itemize}
+    \item \textbf{Hash of the block} - it works like a fingerprint, identifying the block and all of its contents and it is always unique.
+    \item \textbf{Hash of the previous block} - this creates a chain of blocks, they form the blockchain itself.
+\end{itemize}
+
+Once each block is created, its hash is calculated. Changing something inside the block, will cause the hash to change. In another words, hashes are very useful when we want to detect changes to blocks, if the fingerprint of a block changes, it no longer is the same block.
+
+Let's take, for instance, the chain of blocks in the image below:
+
+%Added [H] after so that image is placed after the text above
+%This is only possible by adding also \usepackage{float} to the preamble
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.6\textwidth]{images/changes_in_block.png}
+        \caption{\textit{Example of a hash}}
+    \end{center}
+\end{figure}
+
+As we can see, each block has a hash and the hash of the previous block. So block number 2 points to block number 1, and block number 3 points to block number 2. The first block is called the \textit{Genesis Block}, as it has not got previous blocks.
+
+Now, let's say that someone tampers with the second block, as shown in the image below:
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.6\textwidth]{images/invalid_hash.png}
+        \caption{\textit{Example of a hash}}
+    \end{center}
+\end{figure}
+
+This will cause the hash of the block to change as well. This change will make block 3 and all following blocks invalid because they no longer store a valid hash of the previous block. So changing a a single block will make all following blocks invalid.
+
+But using hashes is not enough to prevent tampering. Computers these days are very fast and can calculate hundreds of thousands of hashes per second, this being said, we could tamper with a block, and recalculate all the hashes of the previous blocks to make our blockchain valid again.
+
+To mitigate this, blockchains have something called proof-of-work.
+
+\subsubsection{Proof-of-work}
+
+
 
 \subsection{How does it work?}
 
@@ -146,8 +195,6 @@ We will also address the topic of Blockchain, and how does it work.
 
 \tab The Bitcoin system has seven main pillars that allow the construction of a fair market. 
 
-%Added [H] after so that image is placed after the text above
-%This is only possible by adding also \usepackage{float} to the preamble
 \begin{figure}[H]
     \begin{center}
         \includegraphics[width=\textwidth]{images/pillars.png}
