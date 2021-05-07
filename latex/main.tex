@@ -221,9 +221,6 @@ In addition, the process of creating new bitcoins is always predictable. No one 
 
 This makes bitcoin's policy better than the one practiced by the banks. The banks' policies change the money quantity and this is not a problem with bitcoin.
 
-
-
-
 \subsection{The Bitcoin Protocol}
 
 \tab Being a decentralized digital currency, Bitcoin is not something that we can physically own, which in itself generates a large deviation from the concept of money that we are used to and that we use in our day-to-day. To use this digital asset, there are many steps/rules that need to be followed, they make up the Bitcoin protocol.
@@ -254,18 +251,18 @@ Replacing the values, we obtain:
 
 Finally, this equation can be translated to the following graphic:
 
-\vspace{5mm} %5mm vertical space
+%\vspace{5mm} %5mm vertical space
 
 %Added [H] after so that image is placed after the text above
 %This is only possible by adding also \usepackage{float} to the preamble
 \begin{figure}[H]
     \begin{center}
-        \includegraphics[width=0.6 \textwidth]{images/Kobiltz_curve.png}
+        \includegraphics[width=0.5 \textwidth]{images/Kobiltz_curve.png}
         \caption{\textit{Kobiltz curve}}
     \end{center}
 \end{figure}
 
-\vspace{5mm} %5mm vertical space
+%\vspace{5mm} %5mm vertical space
 
 \begin{comment}
 %Added [H] after so that image is placed after the text above
@@ -285,7 +282,7 @@ Finally, this equation can be translated to the following graphic:
                 scale only axis,
                 axis lines=middle,
                 smooth,
-                domain=-1.912931:3, %supostamente, sem esta linha o gráfico divide-se em 2 partes, tristeza
+                domain=-1.912931:3, %supostamente, sem esta linha o gráfico divide-se em 2 partes
                 xtick={-5,...,0,...,5},
                 ytick={-5,...,0,...,5},
             ]
@@ -317,7 +314,7 @@ This properties allow us to define two operations: point addition and point doub
     \item Take two points of the elliptic curve, \(P\) and \(Q\).
     \item Pass a line through the previous points.
     \item Mark the point (\(-R\)) from the intersection of the previous line with the curve.
-    \item Mirror \(-R\) through the x-axis, obtaining \(R\)
+    \item Mirror \(-R\) through the x-axis, obtaining \(R\).
 \end{itemize}
 
 This algorithm can be put into the following expression:
@@ -328,18 +325,14 @@ With \(R\) being the result of the sum of the original points.
 
 Finally, this equation can be translated to the following graphic:
 
-\vspace{5mm} %5mm vertical space
-
 %Added [H] after so that image is placed after the text above
 %This is only possible by adding also \usepackage{float} to the preamble
 \begin{figure}[H]
     \begin{center}
-        \includegraphics[width=0.6 \textwidth]{images/point_addition.png}
+        \includegraphics[width=0.5 \textwidth]{images/point_addition.png}
         \caption{\textit{Point addition}}
     \end{center}
 \end{figure}
-
-\vspace{5mm} %5mm vertical space
 
 \paragraph{Point doubling}
 
@@ -349,7 +342,7 @@ Finally, this equation can be translated to the following graphic:
     \item Take a point of the elliptic curve, \(P\).
     \item Pass a tangent line tangent to \(P\).
     \item Mark the point (\(-R\)) from the intersection of the previous line with the curve.
-    \item Mirror \(-R\) through the x-axis, obtaining \(R\)
+    \item Mirror \(-R\) through the x-axis, obtaining \(R\).
 \end{itemize}
 
 This algorithm can be put into the following expression:
@@ -360,16 +353,12 @@ With \(R\) being the result of the sum of \(R\) with itself.
 
 Finally, this equation can be translated to the following graphic:
 
-\vspace{5mm} %5mm vertical space
-
 \begin{figure}[H]
     \begin{center}
-        \includegraphics[width=0.6 \textwidth]{images/point_doubling.png}
+        \includegraphics[width=0.5 \textwidth]{images/point_doubling.png}
         \caption{\textit{Point doubling}}
     \end{center}
 \end{figure}
-
-\vspace{5mm} %5mm vertical space
 
 \paragraph{Scalar multiplication}
 
@@ -394,29 +383,51 @@ As we can see, we just decomposed \(11P\) into two point additions and three poi
 
 One of the uses of scalar multiplication is to calculate the private-public key pair, we will take a look on how it works and where it is placed in the Bitcoin protocol in the section bellow.
 
-\subsubsection{Private-Public key pair}
+\subsubsection{Private-Public key pair generation}
 
-\tab The private-public key pair is used on Bitcoin transactions between users.
+\tab The private-public key pair is used on Bitcoin transactions between users. This keys can be represented as:
 
+\begin{itemize}
+    \item \textbf{Public key} - represents a public Bitcoin address
+    \item \textbf{Private key} - personal key, secret and unique to each user.
+\end{itemize}
 
+For generating this pair, we first need a initial point, usually referred as generator point. This point multiplied by the private key will give us the public key:
 
-\begin{comment}
-Graphically is even easier to understand this, for instance, if we take a point \(P\), and we want to obtain \(4P\), the process would result in this graph:
+\[public\: key = generator\: point \times private\: key\]
 
-\vspace{5mm} %5mm vertical space
+This is the same as saying that we will add the point to itself as many times as the private key value.
+
+Graphically is easier to understand this. For instance, if we take a point \(P\) of the \textit{secp256k1} curve, and we say that the private key is 4, we will add P to itself 4 times, obtaining \(4P\), this would be the value of the public key associated with the given private one. The process would result in this graph:
 
 \begin{figure}[H]
     \begin{center}
-        \includegraphics[width=0.6 \textwidth]{images/Kobiltz_curve_with_points.png}
+        \includegraphics[width=0.5 \textwidth]{images/Kobiltz_curve_with_points.png}
         \caption{\textit{Process of obtaining \(4P\) from the point \(P\), using scalar multiplication}}
     \end{center}
 \end{figure}
 
-\vspace{5mm} %5mm vertical space
+And this is only for a private key of 4, if the private key is a larger number, there are many more calculations to be made, and many other points created during this process. 
 
-\end{comment}
+As we previously discussed, the curve used for public-private key generation in the case of Bitcoin has a parameter \(p\), that is the prime order. This number, being a large prime number, prevents the points taking decimal numbers, during the scalar multiplication process, making the curve a collection of dots.
 
-%\tab In this case, this pair is used in bitcoin and other cryptocurrencies transactions.
+On the graph bellow, we can see a "curve" of finite field with \(b = 7\) and \(p = 37\):
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.6 \textwidth]{images/finite_field_b7_p37.png}
+        \caption{\textit{"Curve" of finite field with prime order 37}}
+    \end{center}
+\end{figure}
+
+Doing this calculation on today's computers is rather fast and efficient, but reversing the same operation is very complex. Although deducing the private key from the public key is possible, it would take a huge time to do so, this process would take \(2^{128}\) attempts, meaning that, even with a million CPU\footnote{Central Processing Unit}s, it would take approximately 260 billion times the age of the universe to break Bitcoin's elliptic curve cryptography.
+
+Generated the pair, this is now used to encrypt data used on Bitcoin transactions.
+
+
+
+
+
 
 % Add "References" to table of contents
 \addcontentsline{toc}{section}{References}
