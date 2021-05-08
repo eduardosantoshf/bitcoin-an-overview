@@ -153,14 +153,16 @@ Each block in the blockchain contains:
 
 Once each block is created, its hash is calculated. Changing something inside the block, will cause the hash to change. In another words, hashes are very useful when we want to detect changes to blocks, if the fingerprint of a block changes, it no longer is the same block.
 
-Let's take, for instance, the chain of blocks in the image below:
+\subsection{How does it work?}
+
+\tab Let's take, for instance, the chain of blocks in the image below:
 
 %Added [H] after so that image is placed after the text above
 %This is only possible by adding also \usepackage{float} to the preamble
 \begin{figure}[H]
     \begin{center}
         \includegraphics[width=0.6\textwidth]{images/changes_in_block.png}
-        \caption{\textit{Example of a hash}}
+        \caption{\textit{Example of a blockchain}}
     \end{center}
 \end{figure}
 
@@ -171,7 +173,7 @@ Now, let's say that someone tampers with the second block, as shown in the image
 \begin{figure}[H]
     \begin{center}
         \includegraphics[width=0.6\textwidth]{images/invalid_hash.png}
-        \caption{\textit{Example of a hash}}
+        \caption{\textit{Example of a tampered blockchain}}
     \end{center}
 \end{figure}
 
@@ -183,9 +185,21 @@ To mitigate this, blockchains have something called proof-of-work.
 
 \subsubsection{Proof-of-work}
 
+\tab Proof-of-work is a mechanism that slows down the creation of new blocks. In Bitcoin's case, it takes about ten minutes to calculate the required proof-of-work and add a new block to the chain. This mechanism makes it very hard to tamper with the blocks, because if we tamper with one block, we will need to recalculate the proof-of-work for all the following blocks.
 
+So, the security of a blockchain comes from its creative use hashing and the proof-of-work mechanism.
 
-\subsection{How does it work?}
+But there is one more way that blockchains secure themselves, and that is by being distributed. Instead of using a central entity to manage the chain, blockchains use a P2P\footnote{peer-to-peer} network that anyone can join. When someone joins this network, he gets the full copy of the blockchain, the node can use this to verify that everything is still in order.
+
+But what specifically happens when someone creates a new block? That block is sent to everyone on the network, each node then verifies the block, to make sure that it has not been tampered with. If everything checks out, each node adds this block to their own blockchain. 
+
+All the nodes in this network create consensus: they agree about what blocks are valid and which are not. Blocks that are tampered with will be rejected by other nodes in the network. This being said, to successfully tamper with a blockchain we would need to tamper with all blocks on the chain, redo the proof-of-work for each block, and take control of more than 50\% of the P2P network. Only then our tampered block would be accepted by everyone else. This entire process is almost impossible to do!
+
+\subsubsection{Smart contracts}
+
+\tab Blockchains are also constantly evolving. One of the most recently developments is the creation of smart contracts.
+
+These contracts are simple programs that are stored on the blockchain and can be used to automatically exchange coins, based on certain conditions.
 
 \section{Bitcoin}
 
@@ -272,7 +286,7 @@ This makes bitcoin's policy better than the one practiced by the banks. The bank
 
 \tab Being a decentralized digital currency, Bitcoin is not something that we can physically own, which in itself generates a large deviation from the concept of money that we are used to and that we use in our day-to-day. To use this digital asset, there are many steps/rules that need to be followed, they make up the Bitcoin protocol.
 
-Bitcoins are not stored centrally nor locally, they exist in a distributed ledger called blockchain. This ledger runs on a P2P\footnote{peer-to-peer} network of computers. 
+Bitcoins are not stored centrally nor locally, they exist in a distributed ledger called blockchain. This ledger runs on a P2P network of computers. 
 
 Owning a Bitcoin is, nothing more, nothing less than simply having the power to transfer it to someone else, with the transaction being recorded in the blockchain. But how does this work?
 
