@@ -134,13 +134,13 @@ We will also address the topic of Blockchain, and how does it work.
 
 \subsection{Definition of Cryptocurrency}
 
-\subsubsection{What is Money?}
+\subsubsection{What is Money}
 
-To understand what is a cryptocurrency, we first need to understand the concept of money as a form of currency, as well as a medium of exchange of goods and services. Before money as we know it existed, the payment/trade of goods and services was made with commodity money.
+\tab To understand what is a cryptocurrency, we first need to understand the concept of money as a form of currency, as well as a medium of exchange of goods and services. Before money as we know it existed, the payment/trade of goods and services was made with commodity money.
 
 \paragraph{Commodity Money}
  
-Commodity money is a physical good whose value comes from the resource of which it is made, in other words, that has “intrinsic value” - utilization outside of its use as money. As such its underlying value and use ensures that people trust it because it has value in and of itself and so people can trade it freely with the knowledge that someone will accept it. This type of money is usually durable, divisible, easily exchangeable, and rare.
+\tab Commodity money is a physical good whose value comes from the resource of which it is made, in other words, that has “intrinsic value” - utilization outside of its use as money. As such its underlying value and use ensures that people trust it because it has value in and of itself and so people can trade it freely with the knowledge that someone will accept it. This type of money is usually durable, divisible, easily exchangeable, and rare.
 
 Some historic examples of commodity money being salt (extremely important to conserve food) and tobacco - after World War II some parts of Europe briefly used this type of money.
 
@@ -148,7 +148,7 @@ Eventually, society evolved into a system of representative money and fiat money
 
 \paragraph{Representative Money}
 
-Representative money is a form of currency often printed on paper that represents something of value - a resource/commodity - but has little or no value of its own. Its acceptance requires that the population trusts the certificate as much as the value that it represents. It was usually backed by a physical resource such as precious metals like gold or silver that existed in the United States as silver certificates or gold certificates issued by State Banks. Nowadays, financial instruments like checks and credit cards are the most common forms of representative money.
+\tab Representative money is a form of currency often printed on paper that represents something of value - a resource/commodity - but has little or no value of its own. Its acceptance requires that the population trusts the certificate as much as the value that it represents. It was usually backed by a physical resource such as precious metals like gold or silver that existed in the United States as silver certificates or gold certificates issued by state banks. Nowadays, financial instruments like checks and credit cards are the most common forms of representative money.
 
 %Added [H] after so that image is placed after the text above
 %This is only possible by adding also \usepackage{float} to the preamble
@@ -161,12 +161,19 @@ Representative money is a form of currency often printed on paper that represent
 
 \paragraph{Fiat Money}
 
-Fiat money is the most common type of currency nowadays, with every other nation operating on some form of fiat money like the Euro or the GBP\footnote{Great British Pound}.
+\tab Fiat money is the most common type of currency nowadays, with every other nation operating on some form of fiat money like the Euro or the GBP\footnote{Great British Pound}.
 
 \renewcommand{\epigraphflush}{center}
 \epigraph{\textbf{Fiat money is a currency without an underlying value. Instead, its value is derived by government and the trust people place in its value. In other words, it is a form of currency that only holds value because of government enforcement.}}{\textit{Source:\href{https://boycewire.com/fiat-money-definition/#FiatVsRepresentative}{\underline{BoyceWire's definition of fiat money}}}}
 
 It’s a type of money where trust is fundamental because, although its value is given by an official law or order, its true value lies in the trust that people place in it. If consumers and businesses did not trust its enforcement value, then it would not be accepted as a method of payment/trade of goods and services. It is only because people believe others will accept it as a method of payment/trade that it maintains its value, if this did not happened, it would be worthless.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.3\textwidth]{images/fiat_money.png}
+        \caption{\textit{Fiat money}}
+    \end{center}
+\end{figure}
 
 Some advantages of this type of money is that it can technically be unlimited and it's cheaper to produce, central banks can "print" as much money as they want, and the production cost is small if not null. Also, much of the transactions are being done online nowadays.
 
@@ -180,14 +187,50 @@ However, stability relies more on the decisions made by the central banks that c
 
 \begin{figure}[H]
     \begin{center}
-        \includegraphics[width=0.3\textwidth]{images/fiat_money.png}
-        \caption{\textit{Fiat money}}
+        \includegraphics[width=0.5\textwidth]{images/venezuela_inflation.png}
+        \caption{\href{https://ichef.bbci.co.uk/news/640/cpsprodpb/7822/production/_105345703_venezuela-inflation_v3_976-nc.png}{\underline{Venezuela's inflation fluctuation between 2000 and 2018}}}
     \end{center}
 \end{figure}
 
+\subsubsection{What is Cryptocurrency}
+
+A cryptocurrency is a digital currency, in other words, a medium of exchange that is encrypted and decentralized. Unlike the U.S. Dollar or the Euro, there is no central authority that manages and maintains the value of a cryptocurrency. It doesn't rely on banks to verify transactions, instead it's a P2P\footnote{peer-to-peer} system that can enable anyone anywhere that has a digital wallet to send and receive payments using a technology called blockchain, which we will talk about later on in this report. 
+
+A cryptocurrency wallet doesn't actually hold any currency, it merely provides an address for your funds.
+
+Unlike physical money that is carried around and exchanged, cryptocurrency payments exist purely as digital entries to an online database that describes specific transactions. When you transfer cryptocurrency funds, the transactions are recorded in a public ledger.
+
+It's possible to buy or sell cryptocurrency in exchange for a fiat currency like the U.S. Dollar using a cryptocurrency exchange. Exchanges, which can hold deposits in both fiat and cryptocurrencies, credit and debit the appropriate balances of buyers and sellers in order to complete cryptocurrency transactions. People can also use cryptocurrency to buy  products and services with more and more companies accepting this type of currencies as a payment method.
+
+Cryptocurrency got its name because it uses encryption to provide security and safety in transactions. This means advanced coding is involved in storing and transmitting cryptocurrency data between wallets and to public ledgers. 
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.5\textwidth]{images/types_of_cryptocurrencies.png}
+        \caption{\href{https://coinratecap.com/public/storage/posts/July2019/5aGA2VGhWLCMy27A49my.png}{\underline{Types of cryptocurrencies}}}
+    \end{center}
+\end{figure}
+
+\subsubsection{Comparison between Cryptocurrencies and Fiat Money}
+
+\tab Compared to fiat money, cryptocurrencies share some characteristics as both can be used for payments and as a store of value. Both rely on widespread trust of people in order to function as a means of exchange although cryptocurrencies' trust and value is based on the underlying technology blockchain while fiat money's value and trust is derived from a governmental institution or a trustworthy authority such as the ECB\footnote{European Central Bank}.
+
+Some key differences are that cryptocurrency is  produced and distributed through a process called mining and most have a cap which means there is a set amount of coins that will ever be in supply, making it possible to tell the amount in circulation at any given time, something impossible in fiat money.
+ 
+Cryptocurrency is not controlled by a centralised authority, transactions can’t be reversed, cancelled or charged back and while Fiat Money can be physical, cryptocurrency is only digital.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{images/cryptocurrencies_vs_fiat_money.jpeg}
+        \caption{\href{https://bitpanda-academy.imgix.net/null94a7b99f-2399-48fa-a503-876e2ba6f2bf/Bitpanda-Infographics_2-bitcoin_fiat.png?auto=compress\%2Cformat&fit=min&fm=jpg&q=80&w=2100}{\underline{Difference between cryptocurrencies and fiat money}}}
+    \end{center}
+\end{figure}
+
+\subsection{How Cryptocurrencies Work}
+
 \section{Blockchain}
 
-\subsection{What is the blockchain?}
+\subsection{What is the blockchain}
 
 \tab A blockchain is a chain of blocks that contains information. A blockchain is a distributed ledger that is completely open to anyone, and it relies on a key property: when some data is recorded inside a blockchain, it becomes very difficult to change it. But how does that work?
 
@@ -240,7 +283,7 @@ To mitigate this, blockchains have something called proof-of-work.
 
 So, the security of a blockchain comes from its creative use hashing and the proof-of-work mechanism.
 
-But there is one more way that blockchains secure themselves, and that is by being distributed. Instead of using a central entity to manage the chain, blockchains use a P2P\footnote{peer-to-peer} network that anyone can join. When someone joins this network, he gets the full copy of the blockchain, the node can use this to verify that everything is still in order.
+But there is one more way that blockchains secure themselves, and that is by being distributed. Instead of using a central entity to manage the chain, blockchains use a P2P network that anyone can join. When someone joins this network, he gets the full copy of the blockchain, the node can use this to verify that everything is still in order.
 
 But what specifically happens when someone creates a new block? That block is sent to everyone on the network, each node then verifies the block, to make sure that it has not been tampered with. If everything checks out, each node adds this block to their own blockchain. 
 
@@ -254,7 +297,7 @@ These contracts are simple programs that are stored on the blockchain and can be
 
 \section{Bitcoin}
 
-\subsection{What is Bitcoin?}
+\subsection{What is Bitcoin}
 
 \subsection{The Seven Pillars of Bitcoin}
 
