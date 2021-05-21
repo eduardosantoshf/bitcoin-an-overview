@@ -152,9 +152,11 @@ Some historic examples of commodity money being salt (extremely important to con
 
 Eventually, society evolved into a system of representative money and fiat money.
 
+%Added [H] after so that image is placed after the text above
+%This is only possible by adding also \usepackage{float} to the preamble
 \begin{figure}[H]
     \begin{center}
-        \includegraphics[width=0.3\textwidth]{images/gold.png}
+        \includegraphics[width=0.2\textwidth]{images/gold.png}
         \caption{\href{https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/60810/gold-bars-clipart-md.png}{\underline{Commodity Money}}}
     \end{center}
 \end{figure}
@@ -165,7 +167,7 @@ Eventually, society evolved into a system of representative money and fiat money
 
 \begin{figure}[H]
     \begin{center}
-        \includegraphics[width=0.3\textwidth]{images/dollar_bills.png}
+        \includegraphics[width=0.2\textwidth]{images/dollar_bills.png}
         \caption{\href{https://lh3.googleusercontent.com/proxy/Kkpz0GitIhYF3RQMX4Rc9adthHDmpJeNtvSA395ZQ8QncVUxUo6ZsF15PNkorqYI5B5XXS18lon4rzLxxtKni9cXvCRebW0}{\underline{Representative Money}}}
     \end{center}
 \end{figure}
@@ -179,8 +181,6 @@ Eventually, society evolved into a system of representative money and fiat money
 
 It’s a type of money where trust is fundamental because, although its value is given by an official law or order, its true value lies in the trust that people place in it. If consumers and businesses did not trust its enforcement value, then it would not be accepted as a method of payment/trade of goods and services. It is only because people believe others will accept it as a method of payment/trade that it maintains its value, if this did not happened, it would be worthless.
 
-%Added [H] after so that image is placed after the text above
-%This is only possible by adding also \usepackage{float} to the preamble
 \begin{figure}[H]
     \begin{center}
         \includegraphics[width=0.3\textwidth]{images/fiat_money.png}
@@ -349,6 +349,26 @@ These contracts are simple programs that are stored on the blockchain and can be
 
 \subsection{What is Bitcoin}
 
+\tab As its name suggests, Bitcoin is an electronic currency, but unlike government issued currencies, there is no single entity that issues Bitcoin or is in charge of processing its transactions. 
+
+Before Bitcoin, it was not possible to make electronic payments without the help of a third party, like a bank or payment processor. Payments were often slow, expensive, and not available to everyone. To solve those problems, Bitcoin operates without a trusted third party, instead, it works as a P2P electronic currency, meaning that payments are sent directly from one person to another.
+
+That works by simply putting computers all over the world, using mathematical functions to independently verify all Bitcoin transactions, which are then added to a public a blockchain, which we already know it works.
+
+Early on in Bitcoin's history, there are very few transactions being processed by the network, but as time went on, more and more people started using this cryptocurrency, so the number of transactions to be processed went up too. Eventually, the Bitcoin network needed to be updated, to keep transactions fast, cheap, and reliable. But, because there was not consensus on how this update should be performed, or wether it should be implemented at all, Bitcoin ultimately had to split into two separate currencies for that update to happen:
+
+\begin{itemize}
+    \item \textbf{Bitcoin Cash (BCH)} - this was the version that implemented the original planned update. Bitcoin Cash can currently process over one hundred transactions per second, with fees reliably less than a 0.01 USD per transaction.
+    \item \textbf{Bitcoin (BTC)} - this version made different updates to the network, and kept the original name and symbol. Bitcoin can only process between 3-7 transactions per second, and is now considered by many to be digital gold, instead of digital cash. Its fees have ranged anywhere from several cents to tens of dollars per transaction, depending on the number of people trying to use the network at once.
+\end{itemize}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.4\textwidth]{images/bitcoin_vs_bitcoin_cash.png}
+        \caption{\href{https://cdn-images-1.medium.com/max/719/1*kW1BN8Zq8YGR1YYYK2kv9g.png}{\underline{Bitcoin vs Bitcoin Cash}}}
+    \end{center}
+\end{figure}
+
 \subsection{The Seven Pillars of Bitcoin}
 
 \tab The Bitcoin system has seven main pillars that allow the construction of a fair market. 
@@ -374,7 +394,6 @@ With that in mind, bitcoin will not be replaced by a more powerful technology. A
 \epigraph{\textbf{Don't trust, verify.}}{\textit{Bitcoin's motto}}
 
 This is a very important aspect of bitcoin. All users can verify everything by their own, making their decisions a lot easier and allowing them the opportunity to see the impact of every transaction.
-
 
 \subsubsection{Neutral}
 
@@ -694,6 +713,10 @@ Virtually everything can be used politically and Bitcoin is no exception. Some g
 For that many politicians point out many of the problems surrounding Bitcoin like its energy expenditure, to disrupt people's trust in the cryptocurrency. Other politicians take a different route and prefer to elaborate taxes surrounding Bitcoin gains and transfers to discourage some investors and at same time gain money on taxes, Portugal for example can still be considered a fiscal paradise regarding Bitcoin gains, but many are already proposing taxes and regulation.
 
 Despite this government distrust of Bitcoin and in general from cryptocurrencies, many consider that different cryptocurrencies have different supports with many indicating that Bitcoin is supported by more right-wing and extremist right-wing individuals as explored in the book “The Politics of Bitcoin: Software as Right-wing Extremism", by David Golumbia, while the rival Ethereum is supported by more left wing and extremist left-wing individuals as shown in a survey conducted by CoinDesk with 1200 cryptocurrency users in 2018, found out that 55\% of “Ethereans” tended left ideologies, while 55\% of “Bitcoiners” tended Right ideologies.
+
+\section{Conclusion}
+
+
 
 \newpage
 
