@@ -128,7 +128,7 @@ We will also address the topic of Blockchain, and how does it work.
 
 \section{Summary / Abstract}
 
-\tab Bitcoin is a cryptocurrency that has been widely spoken over the past few years, majorly because of what it represents: the beginning if the globalization of digital currencies.
+\tab Bitcoin is a cryptocurrency that has been widely spoken over the past few years, majorly because of what it represents: the beginning of the globalization of digital currencies.
 
 \section{Cryptocurrencies}
 
@@ -150,15 +150,6 @@ Eventually, society evolved into a system of representative money and fiat money
 
 \tab Representative money is a form of currency often printed on paper that represents something of value - a resource/commodity - but has little or no value of its own. Its acceptance requires that the population trusts the certificate as much as the value that it represents. It was usually backed by a physical resource such as precious metals like gold or silver that existed in the United States as silver certificates or gold certificates issued by state banks. Nowadays, financial instruments like checks and credit cards are the most common forms of representative money.
 
-%Added [H] after so that image is placed after the text above
-%This is only possible by adding also \usepackage{float} to the preamble
-\begin{figure}[H]
-    \begin{center}
-        \includegraphics[width=0.3\textwidth]{images/representative_money.png}
-        \caption{\textit{Representative money}}
-    \end{center}
-\end{figure}
-
 \paragraph{Fiat Money}
 
 \tab Fiat money is the most common type of currency nowadays, with every other nation operating on some form of fiat money like the Euro or the GBP\footnote{Great British Pound}.
@@ -168,6 +159,8 @@ Eventually, society evolved into a system of representative money and fiat money
 
 It’s a type of money where trust is fundamental because, although its value is given by an official law or order, its true value lies in the trust that people place in it. If consumers and businesses did not trust its enforcement value, then it would not be accepted as a method of payment/trade of goods and services. It is only because people believe others will accept it as a method of payment/trade that it maintains its value, if this did not happened, it would be worthless.
 
+%Added [H] after so that image is placed after the text above
+%This is only possible by adding also \usepackage{float} to the preamble
 \begin{figure}[H]
     \begin{center}
         \includegraphics[width=0.3\textwidth]{images/fiat_money.png}
@@ -175,13 +168,29 @@ It’s a type of money where trust is fundamental because, although its value is
     \end{center}
 \end{figure}
 
-Some advantages of this type of money is that it can technically be unlimited and it's cheaper to produce, central banks can "print" as much money as they want, and the production cost is small if not null. Also, much of the transactions are being done online nowadays.
+Some advantages of this type of money is that it can technically be unlimited and it's cheaper to produce, central banks can "print" as much money as they want, and the production cost is small if not null. Because much of the transactions are being done online nowadays.
 
 On the other hand, gold, silver, or any other resource/commodity is limited by the extraction process, for instance on a mine, and the limited nature of its existence with an exorbitant cost, because it requires workers to mine it, process it, transport it, and then finally store it in a safe place.
 
 The two previously mentioned advantages create stability because the money supply can react quicker to an increasing/decreasing economic output and enter the market in a short period of time, preventing and decreasing the effects of cases like the Great Depression by creating a greater level of price stability, in other words controlling high inflation and deflation.
 
-This stability was demonstrated in the 2008 financial crisis where prices remained relatively stable with inflation rising by an average of over 1,5 percent in the preceding three years, something that most economists favor while in the Great Depression inflation declined by an average of over 8,8 percent in the preceding three years.
+\paragraph{Inflation}
+
+\tab Inflation, measured using the consumer price index, is where the price of goods increases over a set period of time, in other words, the price of a good or service is increasing and each unit of currency buys fewer goods and services consequently reflecting a reduction in the purchasing power per unit of money therefore damaging the economy.
+
+\paragraph{Deflation}
+
+Deflation, measured using the consumer price index, is a decrease in the general price level of goods and services, in other words, allows more goods and services to be bought than before with the same amount of currency, being generally associated with a contraction in the money supply. Although it can be positive in the short-term as it can provide a boost to economic growth if consumers believe prices won’t continue to fall, in the long-term, if consumers start to expect deflation every year, they start delaying purchasing decisions in the perspective that they will get the goods and services even cheaper next year which can depress the economic output.
+
+The previously referred stability was demonstrated in the 2008 financial crisis where prices remained relatively stable with inflation rising by an average of over 1,5 percent in the following three years, something that most economists favor while in the Great Depression inflation declined by an average of over 8,8 percent in the preceding three years.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.6\textwidth]{images/inflation_deflation.png}
+        \caption{\href{https://www.researchgate.net/figure/Inflation-and-deflation-rates-during-the-Great-Depression-and-Great-Recession_fig3_321576621}{\underline{Inflation and deflation rates during the Great Depression and Great Recession}}}
+    \end{center}
+\end{figure}
+
 
 However, stability relies more on the decisions made by the central banks that can have more of an effect than the type of money or even the type of currency used, as demonstrated by the Venezuela currency, the Bolivar Fuerte, replaced the original Bolivar in 2008, but inflation is still very high because among other factors there are no clear restrictions on how much the government can or cannot print money.
 
@@ -227,6 +236,29 @@ Cryptocurrency is not controlled by a centralised authority, transactions can’
 \end{figure}
 
 \subsection{How Cryptocurrencies Work}
+
+\tab Cryptocurrencies work using a technology called Blockchain. Blockchain is a decentralized technology spread across many computers that manages and records transactions in a way that makes it difficult or impossible to change, hack, or cheat the system, a characteristic that constitutes much of the appeal for this technology.
+
+We will talk more about blockchain on the next section.
+
+\subsection{Cryptocurrrencies Mining}
+
+\tab The process by which new currency is produced and entered into circulation is designated as Mining. Mining is also a critical process of the maintenance and development of the blockchain ledger is performed by high power computers that require either a GPU\footnote{Graphics Processing Unit} or an ASIC\footnote{Application-Specific Integrated Circuit} in order to set up a mining rig, to solve complex computational math problems. When computers solve these complex math problems on the network, they produce new cryptocurrency (similar  when a mining operation extracts gold from the ground) and by solving the computational math problems, miners make the blockchain network trustworthy and secure by verifying its transaction information. 
+
+Transactions made in-store or online are documented by Banks, point-of-sale systems, and physical receipts and Miners achieve the same by clumping transactions together in blocks and adding them to the Blockchain. When Miners add a new block of transactions to the blockchain, they need to make sure that those transactions are accurate. In particular, make sure that the cryptocurrency is not being duplicated, a characteristic of  digital currencies designated as “double-spending.”
+
+Miners after completing blocks of verified transactions which are added to the blockchain can then receive a reward if they are the miner who discovers a solution to a complex computational math problem first, and the probability that a Miner will be the one to discover the solution, is related to the portion of the total mining power on the network making mining a very meticulous, costly, and only sporadically rewarding but nevertheless important.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.3\textwidth]{images/bitcoin_mining.png}
+        \caption{\href{https://miro.medium.com/max/366/0*hSBQbC__jrcu2jeg}{\underline{Bitcoin Mining}}}
+    \end{center}
+\end{figure}
+
+As previously mentioned, to make transactions in cryptocurrency, you need a wallet for that currency, that in fact doesn't hold any currency as it merely provides an address for your funds on the blockchain. A cryptocurrency wallet also includes private and public keys that enable you to complete secure transactions.
+
+So every time it's made a transaction to payment of goods and services or transfer cryptocurrency, an individual authorizes the movement of a specified amount of the cryptocurrency from his wallet address to the wallet address of the seller. The transaction is encrypted with the individual private key and pushed to the blockchain. The cryptocurrency network's miners access the individual public key to confirm that his private key was used to encrypt the transaction. Once the block that includes the individual transaction is confirmed, the ledger is updated to show the new cryptocurrency balances for both the individual address and the seller's address and the miner may be rewarded with cryptocurrency for confirming the transaction, with this entire process being conducted by software.
 
 \section{Blockchain}
 
@@ -576,6 +608,31 @@ On the graph bellow, we can see a "curve" of finite field with \(b = 7\) and \(p
 Doing this calculation on today's computers is rather fast and efficient, but reversing the same operation is very complex. Although deducing the private key from the public key is possible, it would take a huge time to do so, this process would take \(2^{128}\) attempts, meaning that, even with a million CPU\footnote{Central Processing Unit}s, it would take approximately 260 billion times the age of the universe to break Bitcoin's elliptic curve cryptography.
 
 Generated the pair, this is now used to encrypt data used on Bitcoin transactions.
+
+\section{Socio-Economic Impact of Bitcoin}
+
+\subsection{Price increases and lack of hardware stock related to “Mining”}
+
+\tab GPUs are one of the most important components in a mining Machine as they provide a lot of computational power. GPUs are widely used in many other industries such as the Movie industry, the growing Gaming industry and in the Artificial Intelligence industry. For the mining process to be profitable most miners use more than one GPU on their system (with Warehouses full of them at times) and try to get the more recent versions quickly.
+
+This among other factors creates stock problems in the GPU market as a growing number of miner companies and individual miners take the majority of the stock available and manufacturers can’t keep up with the demand and retailers take advantage and raise the prices as much as three times more than the recommended. 
+
+A side effect of this stock problem is the big impact on the second hand GPU market. With no stock available miners turn to this market and buy everything they can as a Second GPU, performance is  pretty much the same as a brand new one and their slightly reduced life span is not a problem because the goal is always getting the more recent GPU with better performance. Noticing this behavior, second hand sellers took advantage and started to increase prices to a point where some depending on the GPU model that they were selling  would put prices above the retail price.
+
+This made it almost impossible for a normal consumer to get a brand new or used GPU.
+
+In an attempt to correct the situation Manufacturers took some actions. NVIDIA, one of the biggest manufacturers of GPUs, decided to create a dedicated line of GPUs optimized for Professional Mining, the NVIDIA CMP HX. Another critical action taken by NVIDIA to make miners go with the new line optimized for mining was reducing the mining performance of new GPUs produced on the Geforce line, (a line dedicated to Gaming but very appreciated by miners), by reducing the hash rate. 
+
+The effects of these actions in the market is yet to be felt at the time of writing, but many have already criticized NVIDIA because the manufacturer will focus more resources on the professional Mining line of GPUs taking advantage of the growth of mining investors  leaving aside the remaining lines and because this new line of GPUs will have basically no resale value, the GPUs are going to be very disposable and with very little to recycle in this product the environmental impact will increase.
+
+\subsection{Monetary System}
+
+\tab For the time being the impact of Bitcoin on the Monetary systems is close to none as the market capitalisation (814.7 billion U.S. dollars around May 2021) is still small compared with the Market capitalisation of the banking market worldwide (8.9 trillion dollars around the first Q1 of 2021).
+
+To put in another perspective some Central Banks are experimenting with a type of cryptocurrency, but none of the Central Banks plan to use a blockchain based version in their projects, because it was deemed still not mature and stable enough for the infrastructure of national currency to rely on. As Bitcoin relies on blockchain this makes it not suitable and so it does not have a direct impact on the future plans of the Monetary system, because although it does have some big advantages like controlling fraud and maintaining privacy, there are still many cracks that create highways to commit tax evasion or criminal activities.
+
+\subsection{Energy Expenditure}
+
 
 \newpage
 
