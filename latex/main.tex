@@ -123,14 +123,20 @@
 
 \section{Introductory Note}
 
-\tab This report consists of a brief analysis of Bitcoin and its protocol, exploring its surge and growth in the cryptocurrency market.
-We will also address the topic of Blockchain, and how does it work.
+\tab This report consists of a brief analysis of Bitcoin and its protocol, exploring its surge and growth in the cryptocurrency market, as well as the seven pillars of Bitcoin. The main goals is to explain Bitcoin in a way that anyone can understand.
+
+We will start by addressing the topic of cryptocurrencies, explaining what they, how they work, and how they are compared to the money we know, also going through the topic of cryptocurrencies mining.
+We will also address the topic of blockchain, explaining what it is and how does it work.
+
+To finish, we will explain some of Bitcoin's socio-economical impact.
 
 \section{Summary / Abstract}
 
-\tab Bitcoin is a cryptocurrency that has been widely spoken over the past few years, majorly because of what it represents: the beginning of the globalization of digital currencies.
+\tab Cryptocurrencies like Bitcoin have been widely spoken over the past few years, majorly because of what they represent: the beginning of the globalization of digital currencies.
 
-\section{Cryptocurrencies}
+They came as a new way if looking at money, and they wouldn't exit without blockchain.
+
+\section{Cryptocurrency}
 
 \subsection{Definition of Cryptocurrency}
 
@@ -146,9 +152,23 @@ Some historic examples of commodity money being salt (extremely important to con
 
 Eventually, society evolved into a system of representative money and fiat money.
 
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.3\textwidth]{images/gold.png}
+        \caption{\href{https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/60810/gold-bars-clipart-md.png}{\underline{Commodity Money}}}
+    \end{center}
+\end{figure}
+
 \paragraph{Representative Money}
 
 \tab Representative money is a form of currency often printed on paper that represents something of value - a resource/commodity - but has little or no value of its own. Its acceptance requires that the population trusts the certificate as much as the value that it represents. It was usually backed by a physical resource such as precious metals like gold or silver that existed in the United States as silver certificates or gold certificates issued by state banks. Nowadays, financial instruments like checks and credit cards are the most common forms of representative money.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.3\textwidth]{images/dollar_bills.png}
+        \caption{\href{https://lh3.googleusercontent.com/proxy/Kkpz0GitIhYF3RQMX4Rc9adthHDmpJeNtvSA395ZQ8QncVUxUo6ZsF15PNkorqYI5B5XXS18lon4rzLxxtKni9cXvCRebW0}{\underline{Representative Money}}}
+    \end{center}
+\end{figure}
 
 \paragraph{Fiat Money}
 
@@ -174,11 +194,9 @@ On the other hand, gold, silver, or any other resource/commodity is limited by t
 
 The two previously mentioned advantages create stability because the money supply can react quicker to an increasing/decreasing economic output and enter the market in a short period of time, preventing and decreasing the effects of cases like the Great Depression by creating a greater level of price stability, in other words controlling high inflation and deflation.
 
-\paragraph{Inflation}
+\paragraph{Inflation and Deflation}
 
-\tab Inflation, measured using the consumer price index, is where the price of goods increases over a set period of time, in other words, the price of a good or service is increasing and each unit of currency buys fewer goods and services consequently reflecting a reduction in the purchasing power per unit of money therefore damaging the economy.
-
-\paragraph{Deflation}
+Inflation, measured using the consumer price index, is where the price of goods increases over a set period of time, in other words, the price of a good or service is increasing and each unit of currency buys fewer goods and services consequently reflecting a reduction in the purchasing power per unit of money therefore damaging the economy.
 
 Deflation, measured using the consumer price index, is a decrease in the general price level of goods and services, in other words, allows more goods and services to be bought than before with the same amount of currency, being generally associated with a contraction in the money supply. Although it can be positive in the short-term as it can provide a boost to economic growth if consumers believe prices won’t continue to fall, in the long-term, if consumers start to expect deflation every year, they start delaying purchasing decisions in the perspective that they will get the goods and services even cheaper next year which can depress the economic output.
 
@@ -237,7 +255,7 @@ Cryptocurrency is not controlled by a centralised authority, transactions can’
 
 \subsection{How Cryptocurrencies Work}
 
-\tab Cryptocurrencies work using a technology called Blockchain. Blockchain is a decentralized technology spread across many computers that manages and records transactions in a way that makes it difficult or impossible to change, hack, or cheat the system, a characteristic that constitutes much of the appeal for this technology.
+\tab Cryptocurrencies work using a technology called blockchain. Blockchain is a decentralized technology spread across many computers that manages and records transactions in a way that makes it difficult or impossible to change, hack, or cheat the system, a characteristic that constitutes much of the appeal for this technology.
 
 We will talk more about blockchain on the next section.
 
@@ -245,7 +263,7 @@ We will talk more about blockchain on the next section.
 
 \tab The process by which new currency is produced and entered into circulation is designated as Mining. Mining is also a critical process of the maintenance and development of the blockchain ledger is performed by high power computers that require either a GPU\footnote{Graphics Processing Unit} or an ASIC\footnote{Application-Specific Integrated Circuit} in order to set up a mining rig, to solve complex computational math problems. When computers solve these complex math problems on the network, they produce new cryptocurrency (similar  when a mining operation extracts gold from the ground) and by solving the computational math problems, miners make the blockchain network trustworthy and secure by verifying its transaction information. 
 
-Transactions made in-store or online are documented by Banks, point-of-sale systems, and physical receipts and Miners achieve the same by clumping transactions together in blocks and adding them to the Blockchain. When Miners add a new block of transactions to the blockchain, they need to make sure that those transactions are accurate. In particular, make sure that the cryptocurrency is not being duplicated, a characteristic of  digital currencies designated as “double-spending.”
+Transactions made in-store or online are documented by Banks, point-of-sale systems, and physical receipts and Miners achieve the same by clumping transactions together in blocks and adding them to the blockchain. When Miners add a new block of transactions to the blockchain, they need to make sure that those transactions are accurate. In particular, make sure that the cryptocurrency is not being duplicated, a characteristic of  digital currencies designated as “double-spending.”
 
 Miners after completing blocks of verified transactions which are added to the blockchain can then receive a reward if they are the miner who discovers a solution to a complex computational math problem first, and the probability that a Miner will be the one to discover the solution, is related to the portion of the total mining power on the network making mining a very meticulous, costly, and only sporadically rewarding but nevertheless important.
 
@@ -337,7 +355,7 @@ These contracts are simple programs that are stored on the blockchain and can be
 
 \begin{figure}[H]
     \begin{center}
-        \includegraphics[width=\textwidth]{images/pillars.png}
+        \includegraphics[width=0.7\textwidth]{images/pillars.png}
         \caption{\textit{Pillars of Bitcoin}}
     \end{center}
 \end{figure}
@@ -363,14 +381,6 @@ This is a very important aspect of bitcoin. All users can verify everything by t
 \tab As this system, capable of revolutionizing the current financial system, is available to literally anyone, the success of bitcoin its every user's responsibility. And by this we mean that the users are the ones who make the difference. So, there isn't really an owner of bitcoin. Everyone has equally the same influence. With this, your transactions are only made by you and no one can have a say in it. 
 
 There are many studies that point bitcoin to the U.S dollar's next replacement as the world's reserve currency. They predict the fall of the U.S dollar and the rise of bitcoin, as it is politically neutral. 
-
-%Added [H] after so that image is placed after the text above
-%This is only possible by adding also \usepackage{float} to the preamble
-\begin{figure}[H]
-    \begin{center}
-        \includegraphics[width=0.5\textwidth]{images/dollar_bitcoin.jpeg}
-    \end{center}
-\end{figure}
 
 \subsubsection{Decentralized}
 
@@ -615,7 +625,7 @@ Generated the pair, this is now used to encrypt data used on Bitcoin transaction
 
 \tab GPUs are one of the most important components in a mining Machine as they provide a lot of computational power. GPUs are widely used in many other industries such as the Movie industry, the growing Gaming industry and in the Artificial Intelligence industry. For the mining process to be profitable most miners use more than one GPU on their system (with Warehouses full of them at times) and try to get the more recent versions quickly.
 
-This among other factors creates stock problems in the GPU market as a growing number of miner companies and individual miners take the majority of the stock available and manufacturers can’t keep up with the demand and retailers take advantage and raise the prices as much as three times more than the recommended. 
+This among other factors creates stock problems in the GPU market as a growing number of miner companies and individual miners take the majority of the stock available and manufacturers can’t keep up with the demand and retailers take advantage and raise the prices as much as three times more than the recommended. (Source: \href{https://videocardz.com/newz/nvidia-geforce-rtx-30-graphics-card-cost-3-times-more-than-nvidia-msrp-in-europe}{VideoCardz})
 
 A side effect of this stock problem is the big impact on the second hand GPU market. With no stock available miners turn to this market and buy everything they can as a Second GPU, performance is  pretty much the same as a brand new one and their slightly reduced life span is not a problem because the goal is always getting the more recent GPU with better performance. Noticing this behavior, second hand sellers took advantage and started to increase prices to a point where some depending on the GPU model that they were selling  would put prices above the retail price.
 
@@ -633,6 +643,57 @@ To put in another perspective some Central Banks are experimenting with a type o
 
 \subsection{Energy Expenditure}
 
+\tab The mining process of Bitcoin requires machines with a lot of processor power so, consequently, a large energy expenditure is necessary to support the hardware involved in the process like GPUs, which despite major advances in its electrical efficiency still have a significant energy expenditure. Besides energy consumed by more and more machines, individuals and companies with many mining systems or even entire warehouses full of mining systems are investing heavily in refrigeration systems to improve performances and keep the machines constantly working. The energy dispensed in the Mining Process of Bitcoin is commonly known as Bitcoin Energy Consumption and with the growth of the Bitcoin Network this value will consequently increase with time, even with more efficient mining hardware in the future.
+
+If Bitcoin was a country, it would be in the Top 30 energy users worldwide in 2019, according to an analysis made by University of Cambridge. Bitcoin Energy Consumption in 2019 was around 144.28 TWh\footnote{Terawatt-hour}, a value above many developed countries like, Sweden with 131.798 TWh, Netherlands with 110.682 TWh or Portugal with 48.0351 TWh.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.6\textwidth]{images/bitcoin_costs.png}
+        \caption{\href{https://www.bbc.com/news/technology-56012952}{\underline{Bitcoin’s electricity consumption}}}
+    \end{center}
+\end{figure}
+
+In order to  get the following results University of Cambridge used a Best-Guess estimate of Bitcoin’s electricity consumption. The method assumes that all miners use an equally-weighted group of hardware types that are profitable in electricity terms, assuming the PUE\footnote{power usage effectiveness} of 1.10. So the Best Guess Power Consumption is calculated by multiplying the average energy efficiency of profitable hardware, with the hashrate, with the PUE with the electricity cost per joule (Pel):
+
+\[E_{estimated}(P_{el}) = \frac{\sum_{i=1}^{N} \vartheta i}{N} * H * PUE * 3.16 * 10^7\]
+\[\mbox{with}\]
+\[E_{estimated} - \mbox{best guess power consumption (W)}\]
+\[\frac{\sum_{i=1}^{N} \vartheta i}{N} - \mbox{average energy efficiency of profitable hardware (J/h)}\]
+\[H - \mbox{hashrate (h/s)}\]
+\[PUE - \mbox{power usage effectiveness}\]
+\[P_{el} - \mbox{electricity cost per joule (USD/J)}\]
+
+The Energy Efficiency of Profitable Hardware, in other words, the Profitability Threshold is calculated by dividing the electricity cost per joule by the mining revenue per hash:
+
+\[\theta = \frac{SRev}{P_{el}}\]
+\[\mbox{with}\]
+\[\theta - \mbox{profitability threshold (J/h)}\]
+\[SRev - \mbox{mining revenue per hash (USD/h)}\]
+\[P_{el} - \mbox{electricity cost per joule (USD/J)}\]
+
+This high value of energy consumption comes with many side effects. A  Bitcoin Mining Map from September 2019 to April 2020 created by the University of Cambridge based on geolocation data (i.e. IP addresses) of “hashers” connecting to the Bitcoin mining pools BTC.com, Poolin, and ViaBTC, indicates that from September 2019 to April 2020  roughly 71,70\% of Bitcoin mining was done in China.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=0.8\textwidth]{images/hashrate.png}
+        \caption{\href{https://cbeci.org/mining_map}{\underline{Average monthly share of total hashrate}}}
+    \end{center}
+\end{figure}
+
+This fact is important, because it means that the Bitcoin Network depends heavily on coal-based power that produces some of the worst emissions, which increases Bitcoin's carbon footprint. Many studies have approached  this situation with one study indicating that growth in bitcoin mining alone could result in a 2 degree Celsius increase in global temperatures, although many say such estimates are inflated as miners increasingly go to sources of cheap renewable energy, like hydropower and another study says that bitcoin’s mining carbon footprint in China can threaten its climate change targets.
+
+These discoveries and studies recently made a big negative impact on Bitcoin's reputation as people increasingly understand the effects of climate change and prefer solutions based mostly in green energy to those who don’t. This also led to a statement, on 12 of may, from Tesla's CEO Elon Musk informing that Tesla has suspended vehicle purchases using Bitcoin because of the concerns regarding the rapidly increasing use of fossil fuels for Bitcoin mining and transactions, especially coal. Although believing and trusting the Bitcoin concept, investing in it would go against Tesla’s mission to accelerate the world’s transition to sustainable energy. (Source: https://twitter.com/elonmusk/status/1392602041025843203)
+
+This means that controlling the energy expenditure and transitioning to sustainable energy are some of the challenges for Bitcoin in the next few years.
+
+\subsection{Political implications}
+
+Virtually everything can be used politically and Bitcoin is no exception. Some governments consider Bitcoin a menace because it doesn't have a central authority and that can destabilize or undermine the authority or control of central banks or even from the government itself. Bitcoin anonymity can be used to circumvent capital controls, for money laundering or illegal purchases, and Bitcoin it’s still too risky for many investors, with for example Bitcoin being recently connected to the US Capitol attack where a Large bitcoin payment was made to far-right individuals before the attack.
+
+For that many politicians point out many of the problems surrounding Bitcoin like its energy expenditure, to disrupt people's trust in the cryptocurrency. Other politicians take a different route and prefer to elaborate taxes surrounding Bitcoin gains and transfers to discourage some investors and at same time gain money on taxes, Portugal for example can still be considered a fiscal paradise regarding Bitcoin gains, but many are already proposing taxes and regulation.
+
+Despite this government distrust of Bitcoin and in general from cryptocurrencies, many consider that different cryptocurrencies have different supports with many indicating that Bitcoin is supported by more right-wing and extremist right-wing individuals as explored in the book “The Politics of Bitcoin: Software as Right-wing Extremism", by David Golumbia, while the rival Ethereum is supported by more left wing and extremist left-wing individuals as shown in a survey conducted by CoinDesk with 1200 cryptocurrency users in 2018, found out that 55\% of “Ethereans” tended left ideologies, while 55\% of “Bitcoiners” tended Right ideologies.
 
 \newpage
 
