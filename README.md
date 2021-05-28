@@ -1,6 +1,6 @@
 # SecondAPSEIProject
 
-This report consists of a brief analysis of Bitcoin and its protocol, exploring its surge and growth in the cryptocurrency market, as well as the seven pillars of Bitcoin. The main goals is to explain Bitcoin in a way that anyone can understand.
+This report consists of a brief analysis of Bitcoin and its protocol, exploring its surge and growth in the cryptocurrency market, as well as the seven pillars of Bitcoin. The main goal is to explain Bitcoin in a way that anyone can understand.
 
 We started by addressing the topic of cryptocurrencies, explaining what they, how they work, and howthey are compared to the money we know, also went through the topic of cryptocurrencies mining. We also addressed the topic of blockchain, explaining what it is and how does it work.
 
