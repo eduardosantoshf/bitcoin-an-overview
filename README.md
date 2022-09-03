@@ -1,4 +1,4 @@
-# SecondAPSEIProject
+# Second APSEI Project
 
 This report consists of a brief analysis of Bitcoin and its protocol, exploring its surge and growth in the cryptocurrency market, as well as the seven pillars of Bitcoin. The main goal is to explain Bitcoin in a way that anyone can understand.
 
